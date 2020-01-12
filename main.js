@@ -1,9 +1,22 @@
-// function soma(a = 3, b = 6) {
-//   return a + b;
-// }
+const usuario = {
+  nome: 'Diego',
+  idade: 23,
+  endereco: {
+    cidade: 'Rio do Sul',
+    estado: 'SC'
+  },
+};
 
-// Função soma usando arrow function
-const soma = (a = 3, b = 6) => a + b;
+// Conceito de desestruturação
+const { nome, idade, endereco: { cidade } } = usuario;
 
-console.log(soma(1));
-console.log(soma());
+console.log(nome);
+console.log(idade);
+console.log(cidade);
+
+// Usuando desestruturação em funções
+function mostraNome({ nome, idade }) {
+  console.log(nome, idade);
+}
+
+mostraNome(usuario);
