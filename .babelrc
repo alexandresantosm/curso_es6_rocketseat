@@ -1,3 +1,4 @@
 {
-  "presets": ["@babel/preset-env"] // Identifica o ambiente de trabalho
+  "presets": ["@babel/preset-env"], // Identifica o ambiente de trabalho
+  "plugins": ["@babel/plugin-proposal-object-rest-spread"]
 }
