@@ -1,53 +1,7 @@
 "use strict";
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+var nome = 'Diego';
+var idade = 23; // console.log('Meu nome é ' + nome + ' e tenho ' + idade + ' anos')
+// Usando a funcionalidade template literal: manipulação de variáveis dentro de strings
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-// REST operator: usado para pegar o resto das propriedades
-// const usuario = {
-//   nome: 'Diego',
-//   idade: 23,
-//   empresa: 'Rocketseat'
-// };
-// const { nome, ...resto} = usuario;
-// console.log(nome);
-// console.log(resto);
-// Aplicando rest operator em vetores
-// const arr = [1, 2, 3, 4];
-// const [a, b, ...c] = arr;
-// console.log(a);
-// console.log(b);
-// console.log(c);
-// Aplicando rest operator em parâmetros de função
-// function soma(...param) {
-//   return param.reduce((total, next) => total + next);
-// }
-function soma(a, b) {
-  for (var _len = arguments.length, param = new Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
-    param[_key - 2] = arguments[_key];
-  }
-
-  return param;
-}
-
-console.log(soma(1, 3, 4, 4, 5, 6, 7)); // SPREAD operator: propaga as informações de um objeto ou array e repassa para uma outra estrutura de dados
-
-var arr1 = [1, 2, 3];
-var arr2 = [4, 5, 6];
-var arr3 = [].concat(arr1, arr2);
-console.log(arr3); // SPREAD operator: copiar propriedades de umm objeto para alterar uma propriedade específica
-
-var usuario1 = {
-  nome: 'Diego',
-  idade: 23,
-  empresa: 'Rocketseat'
-};
-
-var usuario2 = _objectSpread({}, usuario1, {
-  nome: 'Gabriel'
-});
-
-console.log(usuario2);
+console.log("Meu nome \xE9 ".concat(nome, " e tenho ").concat(idade, " anos."));
