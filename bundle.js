@@ -1,24 +1,25 @@
 "use strict";
 
-var arr = [1, 3, 4, 5, 8, 9]; // map: percorre o vetor e retorna uma informação
-
-var newArr = arr.map(function (item, index) {
-  // return item * 2;
-  return item + index;
+var arr = [1, 3, 4, 5, 6];
+var newArr = arr.map(function (item) {
+  return item * 2;
 });
-console.log(newArr); // reduce: forma de consumir todo o vetor e retornar uma única informação
+console.log(newArr); // Criando uma arrow function 
+// const test = () => {
+//   return 'teste';
+// }
+//Arrow function retornando um array
+//const test = () => [1, 2, 3];
+//Arrow function retornando uma string
+// const test = () => 'teste';
+//Arrow function retornando um número
+// const test = () => 3;
+//Arrow function retornando um objeto
 
-var sum = arr.reduce(function (total, next) {
-  return total + next;
-});
-console.log(sum); // filter: realizar filtro em um array
+var test = function test() {
+  return {
+    nome: "Diego"
+  };
+};
 
-var filter = arr.filter(function (item) {
-  return item % 2 === 0;
-});
-console.log(filter); // find: verifica se um determinado dado existe ou há num vetor retornando-o 
-
-var find = arr.find(function (item) {
-  return item === 4;
-});
-console.log(find);
+console.log(test());

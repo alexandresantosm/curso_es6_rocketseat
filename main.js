@@ -1,30 +1,24 @@
-const arr = [1, 3, 4, 5, 8, 9];
+const arr = [1, 3, 4, 5, 6];
 
-// map: percorre o vetor e retorna uma informação
-const newArr = arr.map(function(item, index) {
-  // return item * 2;
-  return item + index;
-});
+const newArr = arr.map(item => item * 2);
 
-console.log(newArr);
+console.log(newArr)
 
-// reduce: forma de consumir todo o vetor e retornar uma única informação
-const sum = arr.reduce(function(total, next) {
-  return total + next;
-});
+// Criando uma arrow function 
+// const test = () => {
+//   return 'teste';
+// }
 
-console.log(sum);
+//Arrow function retornando um array
+//const test = () => [1, 2, 3];
 
-// filter: realizar filtro em um array
-const filter = arr.filter(function(item) {
-  return item % 2 === 0;
-});
+//Arrow function retornando uma string
+// const test = () => 'teste';
 
-console.log(filter);
+//Arrow function retornando um número
+// const test = () => 3;
 
-// find: verifica se um determinado dado existe ou há num vetor retornando-o 
-const find = arr.find(function(item) {
-  return item === 4;
-});
+//Arrow function retornando um objeto
+const test = () => ({ nome: "Diego" });
 
-console.log(find);
+console.log(test());
