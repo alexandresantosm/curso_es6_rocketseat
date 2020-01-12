@@ -1,22 +1,24 @@
 "use strict";
 
-// const não é possível a reatribuição.
-// const a = 1;
-// a = 3;
-// Porém, é possível mutar uma variável const
-var usuario = {
-  nome: 'Diego'
-};
-usuario.nome = 'Cleiton';
-console.log(usuario); // let variável de escopo
+var arr = [1, 3, 4, 5, 8, 9]; // map: percorre o vetor e retorna uma informação
 
-function teste(x) {
-  var y = 2;
+var newArr = arr.map(function (item, index) {
+  // return item * 2;
+  return item + index;
+});
+console.log(newArr); // reduce: forma de consumir todo o vetor e retornar uma única informação
 
-  if (x > 5) {
-    var _y = 4;
-    console.log(x, _y);
-  }
-}
+var sum = arr.reduce(function (total, next) {
+  return total + next;
+});
+console.log(sum); // filter: realizar filtro em um array
 
-teste(10);
+var filter = arr.filter(function (item) {
+  return item % 2 === 0;
+});
+console.log(filter); // find: verifica se um determinado dado existe ou há num vetor retornando-o 
+
+var find = arr.find(function (item) {
+  return item === 4;
+});
+console.log(find);

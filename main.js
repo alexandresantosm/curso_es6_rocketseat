@@ -1,25 +1,30 @@
-// const não é possível a reatribuição.
+const arr = [1, 3, 4, 5, 8, 9];
 
-// const a = 1;
+// map: percorre o vetor e retorna uma informação
+const newArr = arr.map(function(item, index) {
+  // return item * 2;
+  return item + index;
+});
 
-// a = 3;
+console.log(newArr);
 
-// Porém, é possível mutar uma variável const
-const usuario = { nome: 'Diego'}
+// reduce: forma de consumir todo o vetor e retornar uma única informação
+const sum = arr.reduce(function(total, next) {
+  return total + next;
+});
 
-usuario.nome = 'Cleiton';
+console.log(sum);
 
-console.log(usuario);
+// filter: realizar filtro em um array
+const filter = arr.filter(function(item) {
+  return item % 2 === 0;
+});
 
-// let variável de escopo
+console.log(filter);
 
-function teste(x) {
-  let y = 2;
+// find: verifica se um determinado dado existe ou há num vetor retornando-o 
+const find = arr.find(function(item) {
+  return item === 4;
+});
 
-  if (x > 5) {
-    let y = 4;
-    console.log(x, y); 
-  }
-}
-
-teste(10);
+console.log(find);
